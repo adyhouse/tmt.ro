@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/tmtro/public_html/wp-content/
-    - /bin/mkdir -p $DEPLOYPATH/themes $DEPLOYPATH/plugins
-    - /bin/rsync -av themes/martfury-child/ $DEPLOYPATH/themes/martfury-child/
-    - /bin/test ! -d plugins || /bin/rsync -av --include='tmt-*/' --include='tmt-*/**' --exclude='*' plugins/ $DEPLOYPATH/plugins/
+    - export DEPLOYPATH=/home/tmtro/public_html/wp-content
+    - /bin/mkdir -p "$DEPLOYPATH/themes" "$DEPLOYPATH/plugins"
+    - /bin/cp -Rf themes/martfury-child "$DEPLOYPATH/themes/"
+    - if [ -d plugins ]; then for SOURCE in plugins/tmt-*; do [ -d "$SOURCE" ] || continue; /bin/cp -Rf "$SOURCE" "$DEPLOYPATH/plugins/"; done; fi
