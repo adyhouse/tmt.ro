@@ -5,6 +5,9 @@
 !.gitignore
 !.gitattributes
 !.cpanel.yml
+!.github/
+!.github/workflows/
+!.github/workflows/**
 
 !themes/
 themes/*
