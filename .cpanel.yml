@@ -4,4 +4,4 @@ deployment:
     - export DEPLOYPATH=/home/tmtro/public_html/wp-content/
     - /bin/mkdir -p $DEPLOYPATH/themes $DEPLOYPATH/plugins
     - /bin/rsync -av themes/martfury-child/ $DEPLOYPATH/themes/martfury-child/
-    - /bin/rsync -av --include='tmt-*/' --include='tmt-*/**' --exclude='*' plugins/ $DEPLOYPATH/plugins/
+    - /bin/test ! -d plugins || /bin/rsync -av --include='tmt-*/' --include='tmt-*/**' --exclude='*' plugins/ $DEPLOYPATH/plugins/
