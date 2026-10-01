@@ -1,0 +1,17 @@
+# Track only Martfury child + custom TMT plugins (tmt-*).
+# Parent theme martfury stays local / on the server, not in Git.
+*
+
+!.gitignore
+!.gitattributes
+!.cpanel.yml
+
+!themes/
+themes/*
+!themes/martfury-child/
+!themes/martfury-child/**
+
+!plugins/
+plugins/*
+!plugins/tmt-*/
+!plugins/tmt-*/**

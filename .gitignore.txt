@@ -1,7 +1,0 @@
-uploads/
-   cache/
-   upgrade/
-   backup*/
-   *.log
-   .DS_Store
-   node_modules/
