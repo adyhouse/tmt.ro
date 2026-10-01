@@ -1,0 +1,5 @@
+---
+  deployment:
+    tasks:
+      - export DEPLOYPATH=/home/tmtro/public_html/wp-content/
+      - /bin/rsync -av --exclude='.git' --exclude='.cpanel.yml' --exclude='.gitignore' --exclude='uploads' --exclude='cache' ./ $DEPLOYPATH
